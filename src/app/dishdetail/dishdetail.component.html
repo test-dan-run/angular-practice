@@ -1,7 +1,10 @@
+<!-- DISCLAIMER: Angular 6 is used, all attributes with 'md' is replaced with 'mat' (e.g.: md-card -> mat-card) -->
+
 <div class="container" fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign.gt-md="space-around center"
   fxLayoutGap="10px" fxLayoutGap.xs="0">
 
   <div fxFlex="40">
+    <!-- Task 2 -->
     <mat-card>
       <mat-card-header>
         <mat-card-title>
@@ -20,15 +23,24 @@
   </div>
 
   <div fxFlex="40">
-    <mat-list>
+    <!-- Task 3 -->
+    <mat-list *ngIf="dish">
       <h1>Comments</h1>
-      <hr>
       <mat-list-item *ngFor="let comment of dish.comments">
-        <p matLine>{{ comment.comment }} </p>
-        <p matLine>{{ comment.rating }} Stars</p>
-        <p matLine>-- {{ comment.author }}, {{ comment.date | date }}</p>
+        <p matLine>
+          <b>{{ comment.comment }}</b>
+        </p>
+        <p matLine>
+          <span style="color:darkorange">
+            <b>{{ comment.rating }} Stars</b>
+          </span>
+        </p>
+        <p matLine>
+          <i>-- {{ comment.author }}, {{ comment.date | date }}</i>
+        </p>
       </mat-list-item>
     </mat-list>
+
   </div>
 
 </div>
