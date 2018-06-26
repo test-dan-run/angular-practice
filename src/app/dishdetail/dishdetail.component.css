@@ -1,18 +1,1 @@
 /* DISCLAIMER: Angular 6 is used, all attributes with 'md' is replaced with 'mat' (e.g.: md-card -> mat-card) */
-
-@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
-
-body {
-  padding: 0;
-  margin: 0;
-  font-family: Roboto, sans-serif;
-}
-
-h1 {
-  font-family: Roboto, sans-serif;
-}
-
-.container {
-  margin: 20px;
-  display: flex;
-}
