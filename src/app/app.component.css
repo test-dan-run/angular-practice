@@ -6,10 +6,6 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-md-card[mat-ink-ripple] {
-  position: relative;
-}
-
 .container {
   margin: 20px;
   display: flex;
