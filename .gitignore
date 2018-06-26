@@ -5,6 +5,9 @@
 /tmp
 /out-tsc
 
+# peer codes
+src/peer codes
+
 # dependencies
 /node_modules
 
