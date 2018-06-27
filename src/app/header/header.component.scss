@@ -1,19 +1,8 @@
 $lt-gray: #ddd;
 $background-dark: #512da8;
+$background-moredark: #4527a0;
 $background-light: #9575cd;
 $background-pale: #d1c4e9;
-
-h1 {
-  font-family: Roboto, sans-serif;
-}
-
-h3 {
-  font-family: Roboto, sans-serif;
-}
-
-p {
-  font-family: Roboto, sans-serif;
-}
 
 @mixin zero-margin($pad-up-down, $pad-left-right) {
   margin: 0px auto;
@@ -24,4 +13,8 @@ p {
   background: $background-light;
   color: floralwhite;
   min-height: 150px;
+}
+
+.active {
+  background: $background-moredark;
 }
