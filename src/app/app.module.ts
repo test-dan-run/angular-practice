@@ -9,11 +9,15 @@ import {
   MatDialogModule,
   MatFormFieldModule,
   MatCheckboxModule,
-  MatInputModule
+  MatInputModule,
+  MatSlideToggleModule,
+  MatSelectModule,
+  MatOptionModule
 } from "@angular/material";
 import { MatButtonModule } from "@angular/material/button";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { FormsModule } from "@angular/forms";
+import { ReactiveFormsModule } from "@angular/forms";
 
 import "hammerjs";
 import { AppComponent } from "./app.component";
@@ -58,7 +62,11 @@ import { LoginComponent } from "./login/login.component";
     MatFormFieldModule,
     MatCheckboxModule,
     MatInputModule,
-    FormsModule
+    MatSelectModule,
+    MatOptionModule,
+    MatSlideToggleModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [DishService, PromotionService, LeaderService],
   entryComponents: [LoginComponent],
