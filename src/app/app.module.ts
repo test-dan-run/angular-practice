@@ -12,7 +12,8 @@ import {
   MatInputModule,
   MatSlideToggleModule,
   MatSelectModule,
-  MatOptionModule
+  MatOptionModule,
+  MatProgressSpinnerModule
 } from "@angular/material";
 import { MatButtonModule } from "@angular/material/button";
 import { FlexLayoutModule } from "@angular/flex-layout";
@@ -66,7 +67,8 @@ import { LoginComponent } from "./login/login.component";
     MatOptionModule,
     MatSlideToggleModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatProgressSpinnerModule
   ],
   providers: [DishService, PromotionService, LeaderService],
   entryComponents: [LoginComponent],
