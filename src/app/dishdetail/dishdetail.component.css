@@ -1,1 +1,4 @@
 /* DISCLAIMER: Angular 6 is used, all attributes with 'md' is replaced with 'mat' (e.g.: md-card -> mat-card) */
+.full-width {
+  width: 95%;
+}
