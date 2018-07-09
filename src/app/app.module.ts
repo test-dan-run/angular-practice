@@ -1,6 +1,14 @@
+import { HttpModule } from "@angular/http";
+import { HttpClientModule } from "@angular/common/http";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from "@angular/core";
+
+import { baseURL } from "./shared/baseurl";
+import { ProcessHTTPMsgService } from "./services/process-httpmsg.service";
+import { RestangularModule, Restangular } from "ngx-restangular";
+import { RestangularConfigFactory } from "./shared/restConfig";
+
 import {
   MatToolbarModule,
   MatGridListModule,
@@ -70,9 +78,18 @@ import { LoginComponent } from "./login/login.component";
     FormsModule,
     ReactiveFormsModule,
     MatProgressSpinnerModule,
-    MatSliderModule
+    MatSliderModule,
+    HttpModule,
+    HttpClientModule,
+    RestangularModule.forRoot(RestangularConfigFactory)
   ],
-  providers: [DishService, PromotionService, LeaderService],
+  providers: [
+    DishService,
+    PromotionService,
+    LeaderService,
+    { provide: "BaseURL", useValue: baseURL },
+    ProcessHTTPMsgService
+  ],
   entryComponents: [LoginComponent],
   bootstrap: [AppComponent]
 })

@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Inject } from "@angular/core";
 
 import { Leader } from "../shared/leader";
 import { LeaderService } from "../services/leader.service";
@@ -11,13 +11,20 @@ import { LeaderService } from "../services/leader.service";
 export class AboutComponent implements OnInit {
   leaders: Leader[];
   selectedLeader: Leader;
+  leaderErrMess: string;
 
-  constructor(private leaderService: LeaderService) {}
+  constructor(
+    private leaderService: LeaderService,
+    @Inject("BaseURL") private BaseURL
+  ) {}
 
   ngOnInit() {
     this.leaderService
       .getLeaders()
-      .subscribe(leader => (this.leaders = leader));
+      .subscribe(
+        leader => (this.leaders = leader),
+        errmess => (this.leaderErrMess = <any>errmess.message)
+      );
   }
 
   onSelect(leader: Leader) {
