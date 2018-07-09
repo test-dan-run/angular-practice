@@ -12,3 +12,10 @@ body {
   margin: 20px;
   display: flex;
 }
+
+.highlight {
+  background-color: lightpink;
+  border: 1px solid black;
+  z-index: 1;
+  transform: scale(1.005);
+}
